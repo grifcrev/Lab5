@@ -2,7 +2,8 @@ import java.util.*;
 
 public class Kruskal
 {
-	static int V = 20;
+	int[][] cost;
+	static int V = 0;
 	public static int[] parent = new int[V];
 	public static int INF = Integer.MAX_VALUE;
 
@@ -30,8 +31,8 @@ public class Kruskal
 		
 		while(edge_count < V - 1) {
 			int min = INF, x = -1, y = -1;
-			for(int i =0; i<V; i++) {
-			for(int j = 0; j < V; j++) {
+			for(int i =0; i<cost.length; i++) {
+			for(int j = 0; j < cost[i].length; j++) {
 				if(find(i) != find(j) && cost[i][j] < min) {
 					min = cost[i][j];
 					x=i;
