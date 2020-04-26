@@ -3,7 +3,7 @@ import java.util.*;
 public class Kruskal
 {
 	int[][] cost;
-	static int V = 0;
+	static int V = 12;
 	public static int[] parent = new int[V];
 	public static int INF = Integer.MAX_VALUE;
 
@@ -40,10 +40,9 @@ public class Kruskal
 				}
 			}
 		}
+			form(x, y);
+			System.out.printf("Edge %d:(%d,%d) cost:%d \n",edge_count++, x, y, min);
+			mincost += edge_count;
 		}
-		
-		form(mincost, INF);
-		System.out.printf("Edgd %d:(%d,%d) cost:%d \n",edge_count++, mincost, INF, edge_count);
-		mincost += edge_count;
 	}
 }
