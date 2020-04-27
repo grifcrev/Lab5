@@ -51,11 +51,11 @@ public class Kruskal
 			}
 			int totalcost = min * 1000;
 			form(x, y);
-			System.out.printf(cities[x] + "->" + cities[y] + " cost: $" + totalcost + "\n", edge_count++, cities[x],
-					cities[y], totalcost);
+			System.out.printf("%s -> %s ($%,d) \n", cities[x], cities[y], totalcost, edge_count++);
 			mincost += totalcost;
 		}
 		int finalcost = mincost;
-		System.out.println("Total Cost: $" + finalcost);
+		System.out.printf("Total Cost: $%,d \n", finalcost);
 	}
 }
+//https://www.geeksforgeeks.org/kruskals-algorithm-simple-implementation-for-adjacency-matrix/
